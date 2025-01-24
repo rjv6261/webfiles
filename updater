@@ -1,0 +1,44 @@
+#!/bin/zsh
+
+# Colors for terminal output
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m'
+
+# ASCII art for "SLASHER"
+echo -e "${GREEN}
+#                                             
+#   _____ __    _____ _____ _____ _____ _____ 
+#  |   __|  |  |  _  |   __|  |  |   __| __  |
+#  |__   |  |__|     |__   |     |   __|    -|
+#  |_____|_____|__|__|_____|__|__|_____|__|__|
+#                                             
+${NC}"
+
+echo "Starting system update..."
+
+# Update the locate database
+echo -e "${GREEN}Running sudo updatedb...${NC}"
+sudo updatedb
+if [ $? -ne 0 ]; then
+    echo -e "${RED}Error: sudo updatedb failed.${NC}"
+    exit 1
+fi
+
+# Update package lists
+echo -e "${GREEN}Running sudo apt update...${NC}"
+sudo apt update
+if [ $? -ne 0 ]; then
+    echo -e "${RED}Error: sudo apt update failed.${NC}"
+    exit 1
+fi
+
+# Upgrade packages
+echo -e "${GREEN}Running sudo apt upgrade -y...${NC}"
+sudo apt upgrade -y
+if [ $? -ne 0 ]; then
+    echo -e "${RED}Error: sudo apt upgrade failed.${NC}"
+    exit 1
+fi
+
+echo -e "${GREEN}System update completed successfully.${NC}"
