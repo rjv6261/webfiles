@@ -1,8 +1,9 @@
 # Exploit: changedetection Remote Code Execution (RCE)
-# Exploit Author: zcrosman / Modified by me
+# Original Author: zcrosman
 # Version: <= 0.45.20
 # Tested on: Linux
 # CVE : CVE-2024-32651
+# Author - Slasher(rvick)
 
 from pwn import *
 import requests
