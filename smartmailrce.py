@@ -1,7 +1,8 @@
 # Exploit Title: SmarterMail Build 6985 - Remote Code Execution
-# Exploit Author: 1F98D - TUNED BY ME
+# Original Author: 1F98D 
 # CVE: CVE-2019-7214
 # Tested on: Windows 10 x64
+# Author: slasher (rvick)
 #!/usr/bin/python3
 
 import base64
