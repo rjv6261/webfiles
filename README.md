@@ -1,5 +1,5 @@
 # webfiles
-A place where I host files. Dont run these on your local machine if they are memory affecting, 
+A place where I host files relating to my website
 
 YOU CAN FIND OUT MORE ABOUT THE SCRIPT IN THE WIKI! (HERE - https://github.com/rjv6261/webfiles/wiki)
 
